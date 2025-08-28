@@ -1,11 +1,11 @@
 import { API_ENDPOINTS } from './apiEndpoints';
 
-export type User = {
+export type Visitor = {
   username: string;
   email: string;
 };
 
-export async function fetchRegisterVisitor(visitorCredentials: User) {
+export async function fetchRegisterVisitor(visitorCredentials: Visitor) {
   const response = await fetch(API_ENDPOINTS.REGISTER_VISITOR, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

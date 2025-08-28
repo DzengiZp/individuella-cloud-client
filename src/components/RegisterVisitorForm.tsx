@@ -1,8 +1,8 @@
 import { useState, type ChangeEvent } from 'react';
-import { fetchRegisterVisitor, type User } from '../api/fetchRegisterVisitor';
+import { fetchRegisterVisitor, type Visitor } from '../api/fetchRegisterVisitor';
 
 export default function RegisterVisitorForm() {
-  const [visitorRegistered, setVisitorRegistered] = useState<User>({ username: '', email: '' });
+  const [visitorRegistered, setVisitorRegistered] = useState<Visitor>({ username: '', email: '' });
 
   const handleSubmit = async (event: React.MouseEvent<HTMLButtonElement>) => {
     try {
