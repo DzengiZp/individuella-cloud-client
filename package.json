@@ -1,9 +1,12 @@
 {
   "name": "individuella-cloud-client",
+  "homepage": "https://dzengizp.github.io/individuella-cloud-client",
   "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
@@ -11,6 +14,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.12",
+    "gh-pages": "^6.3.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router": "^7.8.2",
