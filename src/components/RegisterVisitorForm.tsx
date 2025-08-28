@@ -27,16 +27,16 @@ export default function RegisterVisitorForm() {
 
   return (
     <>
-      <div className='flex flex-col gap-5 py-10'>
-        <form action=''>
-          <div className='flex flex-col justify-center items-center gap-2'>
+      <form action=''>
+        <div className='flex flex-col items-center gap-5 py-10'>
+          <div className='bg-[#453c6d] flex flex-col justify-center items-center gap-2 border w-60 py-10'>
             <label
               className='text-white text-2xl'
               htmlFor='visitor-username'>
               Username:
             </label>
             <input
-              className='bg-white border p-3 shadow-[0_0_20px_rgba(0,0,0,0.20)]'
+              className='bg-white border text-lg p-1 w-50 shadow-[0_0_20px_rgba(0,0,0,0.20)]'
               id='visitor-username'
               name='username'
               type='text'
@@ -51,7 +51,7 @@ export default function RegisterVisitorForm() {
               Email:
             </label>
             <input
-              className='bg-white border p-3 shadow-[0_0_20px_rgba(0,0,0,0.20)]'
+              className='bg-white border text-lg p-1 w-50 shadow-[0_0_20px_rgba(0,0,0,0.20)]'
               id='visitor-email'
               name='email'
               type='email'
@@ -61,14 +61,16 @@ export default function RegisterVisitorForm() {
             />
             <div className='flex justify-center items-center'>
               <button
-                className='bg-green-500 hover:bg-green-600 text-2xl border p-3 w-52 shadow-[0_0_20px_rgba(0,0,0,0.20)]'
+                className='bg-green-500 hover:bg-green-600 hover:shadow-[0_0_20px_rgba(0,0,0,0.40)] 
+                active:mt-2 active:bg-green-600 active:p-1 active:w-49 active:shadow-[0_0_20px_rgba(0,0,0,0.40)] 
+                cursor-pointer text-2xl border p-2 w-50 shadow-[0_0_20px_rgba(0,0,0,0.20)]'
                 onClick={event => handleSubmit(event)}>
                 Submit visitor
               </button>
             </div>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </>
   );
 }
