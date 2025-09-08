@@ -39,9 +39,9 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-        env: #Setting up environment variable in github.
-          base_url: ${{ secrets.VITE_API_BASE_URL}}
-          endpoint: ${{ secrets.VITE_REGISTER_VISITOR}}
+        env:
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
+        run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

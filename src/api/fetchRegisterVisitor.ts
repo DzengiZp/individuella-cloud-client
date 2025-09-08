@@ -1,20 +1,18 @@
+import type { Visitor } from '../types/types';
 import { API_ENDPOINTS } from './apiEndpoints';
 
-export type Visitor = {
-  username: string;
-  email: string;
-};
-
 export async function fetchRegisterVisitor(visitorCredentials: Visitor) {
-  const response = await fetch(API_ENDPOINTS.REGISTER_VISITOR, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(visitorCredentials),
-  });
+  try {
+    const response: Response = await fetch(API_ENDPOINTS.REGISTER_VISITOR, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(visitorCredentials),
+    });
 
-  const jsonResponse = response.json();
+    if (!response.ok) return false;
 
-  console.log(jsonResponse);
-
-  return jsonResponse;
+    return true;
+  } catch (error) {
+    console.error(error);
+  }
 }
