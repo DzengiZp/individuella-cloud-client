@@ -14,7 +14,12 @@ export default function RegisterVisitorForm() {
 
       const response = await fetchRegisterVisitor(visitorRegistered);
 
-      !response ? setUserFeedback('Submit failed, try again later or contact support') : setUserFeedback('Submit sent successfully.');
+      if (!response) {
+        setUserFeedback('Submit failed, try again later or contact support');
+        return;
+      } else {
+        setUserFeedback('Submit sent successfully.');
+      }
 
       setVisitorRegistered({ username: '', email: '' });
     } catch (error) {
@@ -49,7 +54,6 @@ export default function RegisterVisitorForm() {
               name='username'
               type='text'
               placeholder='Username'
-              autoComplete='off'
               value={visitorRegistered.username}
               onChange={handleInputForm}
               required={true}
@@ -66,7 +70,6 @@ export default function RegisterVisitorForm() {
               name='email'
               type='email'
               placeholder='Email'
-              autoComplete='off'
               value={visitorRegistered.email}
               onChange={handleInputForm}
               required={true}
