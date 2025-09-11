@@ -25,13 +25,13 @@ If you want to try the function in this website, check out the API repo at the b
 
 ### Installing
 
-[![Azure Functions](https://custom-icon-badges.demolab.com/badge/Azure%20Functions-0078D7?logo=azure-functions&logoColor=fff)](#)
-
 1. Clone the project/repo:
 
 ```
-git clone https://github.com/DzengiZp/wedding_client.git
+git clone https://github.com/DzengiZp/individuella-cloud-client
 ```
+
+[![NodeJS](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)](#)
 
 2. Download NodeJS if you don't already have it:
 
