@@ -1,69 +1,72 @@
-# React + TypeScript + Vite
+# Dzengiz's Azure Function App for Cloud Course
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img width="160" height="160" alt="azure microsoft" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg" />
 
-Currently, two official plugins are available:
+## About The Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![Microsoft Azure](https://custom-icon-badges.demolab.com/badge/Microsoft%20Azure-0089D6?logo=msazure&logoColor=white)](#)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff)](#)
 
-## Expanding the ESLint configuration
+This is the client side repo for making a request to the functions app backend and registering a visitor to the database which is located in Azure cloud.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+If you want to try the function in this website, check out the API repo at the bottom for more information.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+[![Visual Studio Code](https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7.svg?logo=vsc&logoColor=white)](#)
+[![NodeJS](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)](#)
+[![npm](https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=fff)](#)
+
+- Any OS should work with this project, I used Windows 11 Home.
+- A code editor is required, I use VS Code.
+- You will need to install NodeJS for server side scripting, NPM is included in it.
+
+### Installing
+
+[![Azure Functions](https://custom-icon-badges.demolab.com/badge/Azure%20Functions-0078D7?logo=azure-functions&logoColor=fff)](#)
+
+1. Clone the project/repo:
+
+```
+git clone https://github.com/DzengiZp/wedding_client.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Download NodeJS if you don't already have it:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- [NodeJS](https://nodejs.org/en)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. Executing the program
+
+- Once you're inside the project in your editor, open up the terminal and write
+
+  1. To install all the dependencies required.
+
+  ```ts
+  npm install
+  ```
+
+  2. To run the the program and see the page locally.
+
+  ```ts
+  npm run dev
+  ```
+
+## Api
+
+- [Dzengiz's Azure Function App for Cloud Course](https://github.com/DzengiZp/individuella-cloud-functions-api)
+
+## Author
+
+- Dzengiz Prentic
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.txt](https://github.com/DzengiZp/individuella-cloud-client/blob/main/LICENSE.txt) file for details.
+
+## Acknowledgments
+
+- [Teknikhögskolan - .NET 24](https://teknikhogskolan.se/)
+- [Martin Michail](https://github.com/MartinM89)
+- [Jimmy Johansson](https://github.com/JiimmyJo)
